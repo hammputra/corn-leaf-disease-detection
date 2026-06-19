@@ -153,11 +153,18 @@ if menu == "Deteksi":
         col_res1, col_res2 = st.columns(2)
         with col_res1:
             st.markdown("#### YOLOv8 Original")
-            st.image(res_orig.plot(), use_container_width=True)
-
+            st.image(
+                res_orig.plot(),
+                channels="BGR",
+                use_container_width=True
+            )
         with col_res2:
             st.markdown("#### YOLOv8 + ResCBAM")
-            st.image(res_cbam.plot(), use_container_width=True)
+            st.image(
+                res_cbam.plot(),
+                channels="BGR",
+                use_container_width=True
+            )
 
         # SUMMARY TABLE
         st.markdown("#### Ringkasan Hasil")
