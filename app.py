@@ -28,8 +28,8 @@ st.set_page_config(
 # ======================
 @st.cache_resource
 def load_models():
-    model_original = YOLO("D:/corn-disease/YOLOv8.pt")
-    model_rescbam = YOLO("D:/corn-disease/YOLOv8_ResCBAM.pt")
+    model_original = YOLO("YOLOv8.pt")
+    model_rescbam = YOLO("YOLOv8_ResCBAM.pt")
     return model_original, model_rescbam
 
 model_original, model_rescbam = load_models()
